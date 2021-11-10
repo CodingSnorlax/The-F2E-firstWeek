@@ -11898,6 +11898,10 @@ fieldset:disabled .btn {
   z-index: 3 !important;
 }
 
+.z-index-9999 {
+  z-index: 9999 !important;
+}
+
 .img-top {
   -o-object-position: center top !important;
      object-position: center top !important;
