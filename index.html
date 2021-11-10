@@ -5,109 +5,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Boostrap Index</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <title>Taipei，說走就走</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.min.css">
     <link rel="stylesheet" href="./assets/style/bootstrap.css">
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <nav class="navbar navbar-expand-md navbar-light bg-white pt-5 pt-md-10">
+      <div class="container p-md-0">
+        <a class="navbar-brand me-auto" href="./index.html">
+          <h1 class="logo"></h1>
+        </a>
+        <div class="d-flex">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">景點列表</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
+            <div class="pe-2 px-lg-8 d-flex align-items-center d-none d-md-block">|</div>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          <div class="d-none d-md-block">
+            <form class="d-sm-flex">
+              <div class="d-flex position-relative">
+                <span><i class="fas fa-search text-tertiary position-absolute top-50 translate-middle" style="left: 80%"></i></span>
+                <input class="form-control me-3 border border-tertiary single-rounded-5 box-shadow-none" type="search" placeholder="你想出發去哪? "  aria-label="Search">
+              </div>              
+              <button class="btn btn-primary border border-tertiary single-rounded-2 text-tertiary w-50 box-shadow-none px-4 py-2" type="submit">
+                <i class="fas fa-sliders-h text-white pe-2"></i>
+                進階搜尋</button>
+            </form>
+          </div>
         </div>
+
       </div>
     </nav>
 
-    
-<div class="container">
-  <h1 class="index__h1">這是一段話</h1>
-  <div class="alert alert-primary" role="alert">
-    A simple primary alert—check it out!
+
+
+    <!-- banner -->
+<div class="d-none d-sm-block z-index-3">
+  <!-- pc、pad .ver -->
+  <img class="vh-100 vh-lg-80 img-md-top-40 img-lg-top-34 z-index-3" src="./assets/images/首頁圖片/headerBg-heroImg_pad.png"  alt="Taipei 說走就走">
   </div>
-  <div class="alert alert-secondary" role="alert">
-    A simple secondary alert—check it out!
-  </div>
-  <div class="alert alert-success" role="alert">
-    A simple success alert—check it out!
-  </div>
-  <div class="alert alert-danger" role="alert">
-    A simple danger alert—check it out!
-  </div>
-  <div class="alert alert-warning" role="alert">
-    A simple warning alert—check it out!
-  </div>
-  <div class="alert alert-info" role="alert">
-    A simple info alert—check it out!
-  </div>
-  <div class="alert alert-light" role="alert">
-    A simple light alert—check it out!
-  </div>
-  <div class="alert alert-dark" role="alert">
-    A simple dark alert—check it out!
-  </div>
+
+  <div class="d-sm-none z-index-3">
+    <!-- mobile .ver -->
+  <img class="vh-90 img-top-20 z-index-3" src="./assets/images/首頁圖片/headerBg-heroImg_mobile.png" alt="Taipei 說走就走">
+    </div>
+  
+<!-- mobile搜尋列 -->
+<div class="d-flex justify-content-center center w-100">
+  <form class="d-flex flex-column flex-sm-row align-items-center d-md-none w-70">
+    <div class="d-flex position-relative mb-6 mb-sm-0">
+      <span><i class="fas fa-search text-tertiary position-absolute top-50 translate-middle" style="left: 85%"></i></span>
+      <input class="form-control me-sm-3 border border-tertiary single-rounded-5 box-shadow-none" type="search" placeholder="你想出發去哪? "  aria-label="Search">
+    </div>
+    <button class="btn btn-primary border border-tertiary single-rounded-2 text-tertiary w-sm-50 box-shadow-none px-4 py-2" type="submit">
+      <i class="fas fa-sliders-h text-white pe-2"></i>
+      進階搜尋</button>
+  </form>
 </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- 或許我可以去 -->
+<div class="mask d-flex align-items-center">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-lg-4 ps-lg-17">
+        <div class="d-flex d-lg-block flex-column flex-sm-row align-items-center justify-content-sm-between align-items-start pt-9 pt-md-8 pb-6 pb-md-11 ">
+          <div class="txt pt-lg-10 mb-5 mb-sm-0">
+            <h2 class="text-tertiary mb-1">或許我可以去...</h2>
+            <p class="mb-lg-7">誰說旅行不能現在就走?<br> 開啟一場隨機出發的探險吧！</p>
+          </div>   
+          <a class="btn single-rounded-2 border border-tertiary bg-primary px-4 py-2" href="#">
+            <i class="fas fa-sync-alt pe-2"></i>換一組
+          </a>
+        </div>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="col-lg-8 p-lg-0">
+        <!-- swiper -->
+        <div class="swiper siteSwiper single-rounded-1 pb-12">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <img class="single-rounded-1 pe-md-7 bg-primary" src="./assets/images/首頁圖片/饒河街夜市.png" alt="饒河街夜市">
+                <h3 class="text-secondary mt-2">饒河街觀光夜市</h3>
+              <i class="fas fa-map-marker-alt text-secondary"><span class="ps-1 text-tertiary">松山區｜開放中</span></i>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img class="single-rounded-1 pe-md-7 bg-primary" src="./assets/images/首頁圖片/台北101.png" alt="台北101">
+                <h3 class="text-secondary mt-2">臺北101</h3>
+                <i class="fas fa-map-marker-alt text-secondary"><span class="ps-1 text-tertiary">信義區｜開放中</span></i>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img class="single-rounded-1 pe-md-7 bg-primary" src="./assets/images/首頁圖片/中正紀念堂.png" alt="中正紀念堂">
+                <h3 class="text-secondary mt-2">國立中正紀念堂</h3>
+                <i class="fas fa-map-marker-alt text-secondary"><span class="ps-1 text-tertiary">中正區｜開放中</span></i>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination bottom-0"></div>
+        </div>
+        <!-- swiper -->
       </div>
     </div>
-  </div>
+</div>
+
 </div>
 
 
-    <footer class="footer">
-      footer
-    </footer>
 
+
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.css.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./assets/js/vendors.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
     <script src="./assets/js/all.js"></script>
   </body>
 
