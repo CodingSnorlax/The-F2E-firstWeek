@@ -7,9 +7,11 @@ var changeClick = document.querySelector('.changeClick');
 var showChangeClick = document.querySelector('.showChangeClick');
 var selectMenu = document.querySelector('.selectMenu');
 var typeButton = document.querySelector('.typeButton');
-var displayCard = document.querySelector('.displayCard'); //全域變數
+var displayCard = document.querySelector('.displayCard');
+var chooseArea = document.querySelectorAll('.areaSelectSection >.formSection >.form-check > input');
+var chooseType = document.querySelectorAll('.chooseType >.formSection >.form-check > input');
+var advanchSearchButton = document.querySelector('.advanchSearchButton'); //全域變數
 
-var inputData = '';
 var zipCodeMap = {
   100: '中正區',
   103: '大同區',
@@ -24,20 +26,70 @@ var zipCodeMap = {
   115: '南港區',
   116: '文山區'
 }; //class的分類["遊憩類","自然風景類","溫泉類","都會公園類","體育健身類","藝術類","其他"]
-//取得資料
+//想出發去哪裡
 
-function test() {
-  console.log('test');
-} // function getInputData() {
-//   if (inputSearch.value === '') {
-//     alert('輸入到空白，請重新輸入')
-//   }
-//   else {
-//     inputData = inputSearch.value;
-//   }
-//   inputSearch.value = '';
-// }
-//選擇類別
+function wantToGOWhere() {
+  var searchKeyWord = '';
+
+  if (inputSearch.value === '') {
+    alert('輸入到空白，請重新輸入');
+  } else {
+    //console.log(inputSearch.value)
+    searchKeyWord = "contains(DescriptionDetail ,'".concat(inputSearch.value, "') or contains(Name, '").concat(inputSearch.value, "') or contains(Address ,'").concat(inputSearch.value, "')"); //`contains(DescriptionDetail ,'熱門') or contains(Name, '熱門') or contains(Address ,'熱門')`
+    //console.log(searchKeyWord)
+
+    searchProcess(searchKeyWord);
+  }
+} //進階選擇
+
+
+function advanceChose() {
+  var chooseZipCode = [];
+  var ZipCodeString = '';
+  var chooseTypeArray = [];
+  var TypeString = '';
+  var searchKeyWord = ''; //取得選擇區域的值
+
+  chooseArea.forEach(function (item) {
+    if (item.checked === true) {
+      chooseZipCode.push(item.value); //console.log(chooseZipCode);
+    }
+  });
+  chooseZipCode.forEach(function (item) {
+    ZipCodeString += "ZipCode eq '".concat(item, "' or ");
+  }); //去掉最後面三個字元
+
+  ZipCodeString = ZipCodeString.slice(0, -3); //取得選擇類型的值
+
+  chooseType.forEach(function (item) {
+    if (item.checked === true) {
+      chooseTypeArray.push(item.value);
+    }
+  });
+  console.log(chooseTypeArray);
+  chooseTypeArray.forEach(function (item) {
+    if (item === '熱門') {
+      TypeString += "contains(Name, '".concat(item, "')");
+    } else if (item !== '熱門') {
+      TypeString += " or Class1 eq '".concat(item, "' or Class2 eq '").concat(item, "' or Class3 eq '").concat(item, "'");
+    }
+  }); //如果TypeString沒有熱門兩個字則刪除前4個字元
+
+  if (TypeString.indexOf('熱門') === -1) {
+    TypeString = TypeString.slice(4);
+  }
+
+  if (chooseZipCode.length === 0 && chooseTypeArray.length > 0) {
+    searchKeyWord = TypeString;
+  } else if (chooseZipCode.length > 0 && chooseTypeArray.length === 0) {
+    searchKeyWord = ZipCodeString;
+  } else if (chooseZipCode.length > 0 && chooseTypeArray.length > 0) {
+    searchKeyWord = TypeString + ' or ' + ZipCodeString;
+  } //console.log(searchKeyWord)
+
+
+  searchProcess(searchKeyWord);
+} //選擇類別
 
 
 function seltTypeData() {
@@ -95,7 +147,7 @@ function cheangProcess() {
       console.log(error);
     });
   });
-} //把取道的值組字串並撈回資料
+} //把取到的值組字串並撈回資料
 
 
 function searchProcess(searchKeyWord) {
@@ -103,8 +155,7 @@ function searchProcess(searchKeyWord) {
     headers: getAuthorizationHeader()
   }).then(function (response) {
     //data = response.data;
-    console.log('有撈到資料'); //渲染資料
-
+    //渲染資料
     randerData(response.data);
   })["catch"](function (error) {
     console.log(error);
@@ -149,12 +200,13 @@ function changeClickProcess(e) {
   e.preventDefault();
   cheangProcess();
 } //監控
-//searchClick.addEventListener('click', serachButtonClick, false)
 
 
+searchClick.addEventListener('click', wantToGOWhere, false);
 changeClick.addEventListener('click', changeClickProcess, false);
 selectMenu.addEventListener('change', seltTypeData, false);
-typeButton.addEventListener('click', clickTypeData, false); //開啟網頁後執行
+typeButton.addEventListener('click', clickTypeData, false);
+advanchSearchButton.addEventListener('click', advanceChose, false); //開啟網頁後執行
 
 cheangProcess(); //套件
 
