@@ -145,25 +145,27 @@
       <h2 class="text-tertiary mt-9 mb-7 text-center">熱門景點</h2>
 
       <div class="col-10 d-block d-md-none">
-        <select class="form-select mb-8" aria-label="Default select example">
-          <option selected>請選擇您喜愛的景點類別</option>
+        <select class="selectMenu form-select mb-8" aria-label="Default select example">
+          <option selected disabled>請選擇您喜愛的景點類別</option>
           <option value="熱門景點">熱門景點</option>
           <option value="遊憩類">遊憩類</option>
           <option value="溫泉類">溫泉類</option>
-          <option value="古蹟類">古蹟類</option>
+          <option value="藝術類">藝術類</option>
+          <option value="都會公園類">都會公園類</option>
           <option value="自然風景類">自然風景類</option>
           <option value="體育健身類">體育健身類</option>
         </select>
       </div>
 
       <div class="col-md-12 col-lg-10 d-none d-md-block">
-        <div class="d-flex justify-content-md-center">
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">熱門景點</button>
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">遊憩類</button>
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">溫泉類</button>
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">古蹟類</button>
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">自然風景類</button>
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">體育健身類</button>
+        <div class="typeButton d-flex justify-content-md-center">
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='熱門景點'>熱門景點</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='遊憩類'>遊憩類</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='溫泉類'>溫泉類</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='藝術類'>藝術類</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='都會公園類'>都會公園類</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='自然風景類'>自然風景類</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='體育健身類'>體育健身類</button>
         </div>
 
       </div>
@@ -171,9 +173,9 @@
       <!-- 卡片區 -->
       <div class="col-12">
 
-        <div class="row justify-content-center">
+        <div class="displayCard row justify-content-center">
 
-          <div class="col-12 col-md-6 col-lg-3">
+          <!-- <div class="col-12 col-md-6 col-lg-3">
             <div class="card bg-transparent border-0 mb-5">
               <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
                 <img src="https://www.travel.taipei/image/175616"
@@ -303,7 +305,7 @@
 
           <div class="col-10 col-md-5 col-lg-4">
             <button type="button" class="btn btn-success w-100 mt-4 mb-12 mt-md-8 mb-md-14">更多熱門景點</button>
-          </div>
+          </div> -->
 
         </div>
 

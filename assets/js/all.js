@@ -4,7 +4,10 @@
 var inputSearch = document.querySelector('.inputSearch');
 var searchClick = document.querySelector('.searchClick');
 var changeClick = document.querySelector('.changeClick');
-var showChangeClick = document.querySelector('.showChangeClick'); //全域變數
+var showChangeClick = document.querySelector('.showChangeClick');
+var selectMenu = document.querySelector('.selectMenu');
+var typeButton = document.querySelector('.typeButton');
+var displayCard = document.querySelector('.displayCard'); //全域變數
 
 var inputData = '';
 var zipCodeMap = {
@@ -20,27 +23,49 @@ var zipCodeMap = {
   114: '內湖區',
   115: '南港區',
   116: '文山區'
-}; //取得資料
+}; //class的分類["遊憩類","自然風景類","溫泉類","都會公園類","體育健身類","藝術類","其他"]
+//取得資料
 
-function getInputData() {
-  if (inputSearch.value === '') {
-    alert('輸入到空白，請重新輸入');
+function test() {
+  console.log('test');
+} // function getInputData() {
+//   if (inputSearch.value === '') {
+//     alert('輸入到空白，請重新輸入')
+//   }
+//   else {
+//     inputData = inputSearch.value;
+//   }
+//   inputSearch.value = '';
+// }
+//選擇類別
+
+
+function seltTypeData() {
+  var searchKeyWord = '';
+
+  if (selectMenu.value === '熱門景點') {
+    searchKeyWord = "contains(DescriptionDetail,'\u71B1\u9580')";
   } else {
-    inputData = inputSearch.value;
+    searchKeyWord = "Class1 eq '".concat(selectMenu.value, "' or Class2 eq '").concat(selectMenu.value, "' or Class3 eq '").concat(selectMenu.value, "'");
   }
 
-  inputSearch.value = '';
-} //搜尋按鈕
+  searchProcess(searchKeyWord);
+} //按鈕類別
 
 
-function serachButtonClick(e) {
-  if (e.target.nodeName !== 'I') {
-    return;
+function clickTypeData() {
+  if (event.target.nodeName === 'BUTTON') {
+    var searchKeyWord = '';
+
+    if (event.target.value === '熱門景點') {
+      searchKeyWord = "contains(DescriptionDetail,'\u71B1\u9580')";
+    } else {
+      searchKeyWord = "Class1 eq '".concat(event.target.value, "' or Class2 eq '").concat(event.target.value, "' or Class3 eq '").concat(event.target.value, "'");
+    }
+
+    searchProcess(searchKeyWord);
   } else {
-    //console.log('test')
-    //console.log(e.target.nodeName)
-    getInputData();
-    console.log(inputData);
+    return;
   }
 } //換一組功能
 
@@ -71,23 +96,20 @@ function cheangProcess() {
     });
   });
 } //把取道的值組字串並撈回資料
-// function searchProcess() {
-//   axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant/Taipei?$filter=contains(Name,'${keyWord}')&$top=${showNum}&$format=JSON`
-//     ,
-//     {
-//       headers: getAuthorizationHeader()
-//     }
-//   )
-//     .then(function (response) {
-//       data = response.data;
-//       //渲染資料
-//       randerData()
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-// }
-//授權碼記得要用在axios內
+
+
+function searchProcess(searchKeyWord) {
+  axios.get("https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/Taipei?$filter=".concat(searchKeyWord, "&$top=1000&$format=JSON"), {
+    headers: getAuthorizationHeader()
+  }).then(function (response) {
+    //data = response.data;
+    console.log('有撈到資料'); //渲染資料
+
+    randerData(response.data);
+  })["catch"](function (error) {
+    console.log(error);
+  });
+} //授權碼記得要用在axios內
 
 
 function getAuthorizationHeader() {
@@ -106,26 +128,20 @@ function getAuthorizationHeader() {
     'X-Date': GMTString
   };
 } //顯示資料
-// function showDataProcess(responseData) {
-//   let content = ''
-//   responseData.forEach((item, index) => {
-//     content += `<li class="swiper-slide">
-//     <a href="#">
-//       <img class="single-rounded-1 pe-md-7 bg-primary" src=${item[index][0].Picture.PictureUrl1} alt=${item[index][0].Name}">
-//       <h3 class="text-secondary mt-2">${item[index][0].Name}</h3>
-//     <i class="fas fa-map-marker-alt text-secondary"><span class="ps-1 text-tertiary"${zipCodeMap[item[index][0].ZipCode]}
-//   ｜${item[index][0].OpenTime}</span ></i >
-//     </a >
-//   </li > `
-//   })
-//   showChangeClick.innerHTML = content
-// }
-//渲染資料
-// function randerData(responseData) {
-//   showDataProcess(responseData)
-// }
-//search.addEventListener('click',searchProcess,false)
-//功能執行
+
+
+function showDataProcess(responseData) {
+  var content = '';
+  responseData.forEach(function (item, index) {
+    content += "<div class=\"col-12 col-md-6 col-lg-3\">\n    <div class=\"card bg-transparent border-0 mb-5\">\n      <div class=\" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow\">\n        <img src=\"".concat(item.Picture.PictureUrl1, "\"\n          class=\"card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary\" alt=\"...\">\n      </div>\n      <div class=\"card-body\">\n        <h3 class=\"card-title mb-2 fs-lg-4\">").concat(item.Name, "</h3>\n        <p class=\"card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5\">\n          ").concat(item.DescriptionDetail, "\n        </p>\n        <a href=\"#\" class=\"text-success stretched-link\"># \u71B1\u9580\u666F\u9EDE</a>\n      </div>\n    </div>\n  </div> ");
+  });
+  displayCard.innerHTML = content;
+} //渲染資料
+
+
+function randerData(responseData) {
+  showDataProcess(responseData);
+} //功能執行
 //點擊換一組功能
 
 
@@ -133,10 +149,12 @@ function changeClickProcess(e) {
   e.preventDefault();
   cheangProcess();
 } //監控
+//searchClick.addEventListener('click', serachButtonClick, false)
 
 
-searchClick.addEventListener('click', serachButtonClick, false);
-changeClick.addEventListener('click', changeClickProcess, false); //開啟網頁後執行
+changeClick.addEventListener('click', changeClickProcess, false);
+selectMenu.addEventListener('change', seltTypeData, false);
+typeButton.addEventListener('click', clickTypeData, false); //開啟網頁後執行
 
 cheangProcess(); //套件
 
@@ -165,7 +183,7 @@ var swiper = new Swiper('.siteSwiper', {
   }
 }); // footer 的 go to top button:
 
-mybutton = document.getElementById("goTopBtn"); // When the user scrolls down 20px from the top of the document, show the button
+var mybutton = document.getElementById("goTopBtn"); // When the user scrolls down 20px from the top of the document, show the button
 
 window.onscroll = function () {
   scrollFunction();
