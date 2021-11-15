@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    景點列表
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.min.css">
+  <link rel="stylesheet" href="./assets/style/bootstrap.css">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-white pt-5 pt-md-10">
+    <div class="container p-md-0">
+      <a class="navbar-brand me-auto" href="./index.html">
+        <h1 class="logo"></h1>
+      </a>
+      <div class="d-flex">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Attractions-list.html">景點列表</a>
+          </li>
+          <div class="pe-2 px-lg-8 d-flex align-items-center d-none d-md-block">|</div>
+        </ul>
+        <div class="d-none d-md-block">
+          <form class="d-sm-flex">
+            <div class="d-flex position-relative">
+              <a class="searchClick z-index-9999" href="#"><span><i
+                    class="fas fa-search text-tertiary position-absolute top-50 translate-middle"
+                    style="left: 80%"></i></span></a>
+              <input class="inputSearch form-control me-3 border border-tertiary single-rounded-5 box-shadow-none"
+                type="text" placeholder="你想出發去哪? " aria-label="Search">
+            </div>
+
+            <!-- 這裡是連接進階搜尋 modal 的按鈕 -->
+            <button
+              class="btn btn-primary border border-tertiary single-rounded-2 text-tertiary w-50 box-shadow-none px-4 py-2"
+              type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fas fa-sliders-h text-white pe-2"></i>
+              進階搜尋</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  
+  <!-- banner -->
+
+<!-- 景點列表 -->
+<div class="container">
+    <div class="row bg-light rounded-4">
+        <div class="col-12">
+
+          
+            <div class="row justify-content-center pt-5 pt-lg-10 pb-7 pb-lg-12">
+              <div class="col-md-9 d-flex flex-column flex-md-row  justify-content-md-between align-items-md-center">
+                <div class="text mb-4 mb-md-0">
+                  <p class="mb-4">景點區域｜<span>信義區、士林區、中正區</span></p>
+                  <p>開放時間｜<span>不限</span></p>
+                </div>
+                <a href="#" class="btn btn-white single-rounded-5 w-100 w-md-25"><i class="far fa-trash-alt pe-2"></i>清除選項</a>
+              </div>
+            </div>
+          
+
+            <div class="displayCard row justify-content-center">
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card bg-transparent border-0 mb-5">
+                  <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
+                    <img src="https://www.travel.taipei/image/175616"
+                      class="card-img-top single-rounded-8 single-rounded-lg-6 w-100 bg-primary" alt="...">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title mb-2 fs-lg-4">臺北市立美術館</h3>
+                    <p class="card-text mb-4 mb-lg-2 text-light-gray fs-lg-4 ellipsis5">
+                      1983年開館，是臺灣首座現代美術館，空間與展品的規劃新潮活潑，結合民眾生活與美術賞析。館內空間包含地下1層及地面3層，地下樓主要提供年輕藝術家及團體展、競賽展，附設圖書及餐飲等服務。1樓除了入口大廳，展覽室6公尺高的大型牆面及3層樓挑高的寬敞空間，主要用於國內外重要大型展覽；2樓常設展區依照美術史架構或主題，展出各項館藏。3樓明亮的採光與雙十字型交錯空間則以主題展覽為主。建築物由高而潘建築師所設計。除了展覽，館方不定期舉辦研討及假日親子活動，製造美術館與民眾互動的機會，更拉近藝術與生活的距離。現更推出週六夜間開館，為營造夜間時段濃厚的藝術氣氛，美術館也特別增加館體及戶外雕塑照明，廣場上的大型青銅雕塑「朱銘－太極拱門」和紅色不鏽鋼「李再鈐－紅不讓」都成為中山北路夜間的美麗視覺焦點。
+                    </p>
+                    <a href="#" class="text-success stretched-link"># 熱門景點</a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-10 col-md-5 col-lg-4">
+                <div class="d-flex justify-content-center mt-4 mb-12 mt-md-8 mb-md-14">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link box-shadow-none" href="#" aria-label="Previous">
+                          <i class="fas fa-chevron-left text-secondary" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link text-secondary box-shadow-none" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link text-secondary box-shadow-none" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link text-secondary box-shadow-none" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link box-shadow-none" href="#" aria-label="Next">
+                          <i class="fas fa-chevron-right text-secondary" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+              </div>
+              </div>
+    
+            </div>
+    
+          </div>
+    </div>
+</div>
+
+      <!-- pad版以上 footer -->
+      <div class="bg-footer-black w-100 d-none d-md-block">
+
+        <div class="d-flex justify-content-between">
+    
+          <div class="footer mx-auto">
+            <p class="text-white text-center pt-6">© 2021 [F2E] 路過的菜椒仔 - All rights reserved.</p>
+          </div>
+    
+          <div class="goTopBtnArea text-center">
+            <button onclick="topFunction()" class="goTopBtn d-block py-6 px-12" id="goTopBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+          </div>
+    
+        </div>
+    
+      </div>
+    
+    
+      <!-- 手機版 footer -->
+      <div class="d-block d-md-none">
+      <div class="goTopBtnArea text-center d-block">
+        <button onclick="topFunction()" class="goTopBtn w-100 h-100 py-2" id="goTopBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+      </div>
+    
+      <div class="footer bg-footer-black p-6">
+        <span class="text-white d-block text-center">© 2021 [F2E] 路過的菜椒仔 - All rights reserved.</span>  
+      </div>
+      </div>
+
+    <!-- 篩選條件 modal -->
+    <form >
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title h3 text-tertiary" id="exampleModalLabel">篩選條件</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <!-- 篩選區域按鈕 -->
+            <div class="areaSelectSection">
+
+              <h4 class="h3 mb-4">請選擇區域 <span class="h4">(可複選)</span></h4>
+
+              <!-- 中正區到大安區 -->
+              <div class="formSection d-flex mb-6">
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="100" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    中正區
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="103" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    大同區
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="104" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    中山區
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="105" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    松山區
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="106" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    大安區
+                  </label>
+                </div>
+
+              </div>
+
+
+              <!-- 萬華區到內湖區 -->
+
+              <div class="formSection d-flex mb-6">
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="108" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    萬華區
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="110" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    信義區
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="111" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    士林區
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="112" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    北投區
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="114" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    內湖區
+                  </label>
+                </div>
+
+              </div>
+
+
+              <!-- 南港、文山區 -->
+
+              <div class="formSection d-flex mb-6">
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="115" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    南港區
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="116" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    文山區
+                  </label>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- 篩選景點類型 -->
+            <div class="chooseType scenicSpotTypeSection">
+
+              <h4 class="h3 mb-4">請選擇類型 <span class="h4">(可複選)</span></h4>
+
+              <div class="formSection d-flex mb-6">
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="熱門" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    熱門景點
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="遊憩類" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    遊憩類
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="溫泉類" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    溫泉類
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="藝術類" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    藝術類
+                  </label>
+                </div>
+
+              </div>
+
+              <div class="formSection d-flex mb-6">
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="自然風景類" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    自然風景類
+                  </label>
+                </div>
+
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="體育健身類" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    體育健身類
+                  </label>
+                </div>
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="都會公園類" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    都會公園類
+                  </label>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- modal 清除、搜尋按鈕 -->
+            <div class="modal-footer">
+              <button type="reset" class="cleanButton  btn btn-white border border-tertiary text-tertiary single-rounded-2"
+                ><i class="far fa-trash-alt me-2"></i>清除全部</button>
+              <button type="button" class="advanchSearchButton btn btn-primary border border-tertiary text-tertiary single-rounded-2"><i
+                  class="fas fa-paper-plane me-2"></i>送出搜尋</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+      <!-- modal 功能結束 -->
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.css.min.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script src="./assets/js/vendors.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
+      <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

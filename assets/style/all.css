@@ -25171,7 +25171,7 @@ fieldset:disabled .btn {
 }
 
 .mask {
-  height: 500px;
+  height: 550px;
   background-image: -o-linear-gradient(45deg, #ffc437 2%, #ffc437 100%, #FFFFFF 100%, #FFFFFF 100%);
   background-image: linear-gradient(45deg, #ffc437 2%, #ffc437 100%, #FFFFFF 100%, #FFFFFF 100%);
 }
@@ -25185,6 +25185,7 @@ fieldset:disabled .btn {
 
 @media (min-width: 992px) {
   .mask {
+    height: 500px;
     background-image: -o-linear-gradient(45deg, #ffc437 2%, #ffc437 43%, #FFFFFF 43%, #FFFFFF 100%);
     background-image: linear-gradient(45deg, #ffc437 2%, #ffc437 43%, #FFFFFF 43%, #FFFFFF 100%);
   }
