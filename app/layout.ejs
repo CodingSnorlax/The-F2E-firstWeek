@@ -27,7 +27,7 @@
       <div class="d-flex">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">景點列表</a>
+            <a class="nav-link active" aria-current="page" href="Attractions-list.html">景點列表</a>
           </li>
           <div class="pe-2 px-lg-8 d-flex align-items-center d-none d-md-block">|</div>
         </ul>
@@ -54,10 +54,41 @@
     </div>
   </nav>
 
+
+  
   <%- contents %>
 
+      <!-- pad版以上 footer -->
+      <div class="bg-footer-black w-100 d-none d-md-block">
+
+        <div class="d-flex justify-content-between">
+    
+          <div class="footer mx-auto">
+            <p class="text-white text-center pt-6">© 2021 [F2E] 路過的菜椒仔 - All rights reserved.</p>
+          </div>
+    
+          <div class="goTopBtnArea text-center">
+            <button onclick="topFunction()" class="goTopBtn d-block py-6 px-12" id="goTopBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+          </div>
+    
+        </div>
+    
+      </div>
+    
+    
+      <!-- 手機版 footer -->
+      <div class="d-block d-md-none">
+      <div class="goTopBtnArea text-center d-block">
+        <button onclick="topFunction()" class="goTopBtn w-100 h-100 py-2" id="goTopBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+      </div>
+    
+      <div class="footer bg-footer-black p-6">
+        <span class="text-white d-block text-center">© 2021 [F2E] 路過的菜椒仔 - All rights reserved.</span>  
+      </div>
+      </div>
 
     <!-- 篩選條件 modal -->
+    <form >
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -76,35 +107,35 @@
               <div class="formSection d-flex mb-6">
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="100" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     中正區
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="103" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     大同區
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="104" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     中山區
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="105" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     松山區
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="106" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     大安區
                   </label>
@@ -118,35 +149,35 @@
               <div class="formSection d-flex mb-6">
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="108" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     萬華區
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="110" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     信義區
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="111" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     士林區
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="112" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     北投區
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="114" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     內湖區
                   </label>
@@ -160,14 +191,14 @@
               <div class="formSection d-flex mb-6">
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="115" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     南港區
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="116" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     文山區
                   </label>
@@ -179,37 +210,37 @@
 
 
             <!-- 篩選景點類型 -->
-            <div class="scenicSpotTypeSection">
+            <div class="chooseType scenicSpotTypeSection">
 
               <h4 class="h3 mb-4">請選擇類型 <span class="h4">(可複選)</span></h4>
 
               <div class="formSection d-flex mb-6">
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="熱門" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     熱門景點
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="遊憩類" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     遊憩類
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="溫泉類" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     溫泉類
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="藝術類" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
-                    古蹟類
+                    藝術類
                   </label>
                 </div>
 
@@ -218,16 +249,22 @@
               <div class="formSection d-flex mb-6">
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="自然風景類" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     自然風景類
                   </label>
                 </div>
 
                 <div class="form-check me-4">
-                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <input class="form-check-input" type="checkbox" value="體育健身類" id="defaultCheck1">
                   <label class="form-check-label" for="defaultCheck1">
                     體育健身類
+                  </label>
+                </div>
+                <div class="form-check me-4">
+                  <input class="form-check-input" type="checkbox" value="都會公園類" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    都會公園類
                   </label>
                 </div>
 
@@ -238,16 +275,19 @@
 
             <!-- modal 清除、搜尋按鈕 -->
             <div class="modal-footer">
-              <button type="button" class="btn btn-white border border-tertiary text-tertiary single-rounded-2"
-                data-bs-dismiss="modal"><i class="far fa-trash-alt me-2"></i>清除全部</button>
-              <button type="button" class="btn btn-primary border border-tertiary text-tertiary single-rounded-2"><i
+              <button type="reset" class="cleanButton  btn btn-white border border-tertiary text-tertiary single-rounded-2"
+                ><i class="far fa-trash-alt me-2"></i>清除全部</button>
+              <button type="button" class="advanchSearchButton btn btn-primary border border-tertiary text-tertiary single-rounded-2"><i
                   class="fas fa-paper-plane me-2"></i>送出搜尋</button>
             </div>
           </div>
         </div>
       </div>
-
+    </form>
       <!-- modal 功能結束 -->
+
+
+
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.css.min.js"></script>
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

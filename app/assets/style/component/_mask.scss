@@ -1,10 +1,11 @@
 .mask{
-    height: 500px;
+    height: 550px;
     background-image: linear-gradient(45deg, $primary 2%, $primary 100%, #FFFFFF 100%, #FFFFFF 100%);
     @include media-breakpoint-up(sm) {
         background-image: linear-gradient(45deg, $primary 2%, $primary 60%, #FFFFFF 60%, #FFFFFF 100%);
       }
     @include media-breakpoint-up(lg) {
+      height: 500px;
         background-image: linear-gradient(45deg, $primary 2%, $primary 43%, #FFFFFF 43%, #FFFFFF 100%);
       }
 }

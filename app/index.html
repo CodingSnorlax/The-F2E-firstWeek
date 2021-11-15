@@ -42,7 +42,7 @@ current: index
       <div class="col-lg-4 ps-lg-17">
         <div
           class="d-flex d-lg-block flex-column flex-sm-row align-items-center justify-content-sm-between align-items-start pt-9 pt-md-8 pb-6 pb-md-11 ">
-          <div class="txt pt-lg-10 mb-5 mb-sm-0">
+          <div class="txt pt-5 pt-lg-10 mb-5 mb-sm-0">
             <h2 class="text-tertiary mb-1">或許我可以去...</h2>
             <p class="mb-lg-7">誰說旅行不能現在就走?<br> 開啟一場隨機出發的探險吧！</p>
           </div>
@@ -53,7 +53,7 @@ current: index
       </div>
       <div class="col-lg-8 p-lg-0">
         <!-- swiper -->
-        <div class="swiper siteSwiper single-rounded-1 pb-12">
+        <div class="swiper siteSwiper single-rounded-1 pb-8">
           <ul class="showChangeClick swiper-wrapper">
 
             <!-- <li class="swiper-slide">
@@ -95,25 +95,27 @@ current: index
       <h2 class="text-tertiary mt-9 mb-7 text-center">熱門景點</h2>
 
       <div class="col-10 d-block d-md-none">
-        <select class="form-select mb-8" aria-label="Default select example">
-          <option selected>請選擇您喜愛的景點類別</option>
+        <select class="selectMenu form-select mb-8" aria-label="Default select example">
+          <option selected disabled>請選擇您喜愛的景點類別</option>
           <option value="熱門景點">熱門景點</option>
           <option value="遊憩類">遊憩類</option>
           <option value="溫泉類">溫泉類</option>
-          <option value="古蹟類">古蹟類</option>
+          <option value="藝術類">藝術類</option>
+          <option value="都會公園類">都會公園類</option>
           <option value="自然風景類">自然風景類</option>
           <option value="體育健身類">體育健身類</option>
         </select>
       </div>
 
       <div class="col-md-12 col-lg-10 d-none d-md-block">
-        <div class="d-flex justify-content-md-center">
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">熱門景點</button>
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">遊憩類</button>
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">溫泉類</button>
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">古蹟類</button>
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">自然風景類</button>
-          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4">體育健身類</button>
+        <div class="typeButton d-flex justify-content-md-center">
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='熱門景點'>熱門景點</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='遊憩類'>遊憩類</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='溫泉類'>溫泉類</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='藝術類'>藝術類</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='都會公園類'>都會公園類</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='自然風景類'>自然風景類</button>
+          <button type="button" class="btn btn-outline-success rounded-pill mb-6 me-4"value='體育健身類'>體育健身類</button>
         </div>
 
       </div>
@@ -121,9 +123,9 @@ current: index
       <!-- 卡片區 -->
       <div class="col-12">
 
-        <div class="row justify-content-center">
+        <div class="displayCard row justify-content-center">
 
-          <div class="col-12 col-md-6 col-lg-3">
+          <!-- <div class="col-12 col-md-6 col-lg-3">
             <div class="card bg-transparent border-0 mb-5">
               <div class=" single-rounded-8 single-rounded-lg-6 mb-2 card-box-shadow">
                 <img src="https://www.travel.taipei/image/175616"
@@ -253,7 +255,7 @@ current: index
 
           <div class="col-10 col-md-5 col-lg-4">
             <button type="button" class="btn btn-success w-100 mt-4 mb-12 mt-md-8 mb-md-14">更多熱門景點</button>
-          </div>
+          </div> -->
 
         </div>
 
@@ -265,32 +267,5 @@ current: index
 
 
 
-<!-- pad版以上 footer -->
-<div class="bg-footer-black w-100 d-none d-md-block">
 
-    <div class="d-flex justify-content-between">
-
-      <div class="footer mx-auto">
-        <p class="text-white text-center pt-6">© 2021 [F2E] 路過的菜椒仔 - All rights reserved.</p>
-      </div>
-
-      <div class="goTopBtnArea text-center">
-        <button onclick="topFunction()" class="goTopBtn d-block py-6 px-12" id="goTopBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
-      </div>
-
-    </div>
-
-</div>
-
-
-<!-- 手機版 footer -->
-<div class="d-block d-md-none">
-  <div class="goTopBtnArea text-center d-block">
-    <button onclick="topFunction()" class="goTopBtn w-100 h-100 py-2" id="goTopBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
-  </div>
-  
-  <div class="footer bg-footer-black p-6">
-    <span class="text-white d-block text-center">© 2021 [F2E] 路過的菜椒仔 - All rights reserved.</span>  
-  </div>
-</div>
 
